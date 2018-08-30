@@ -1,0 +1,78 @@
+\documentclass[11pt]{article}
+%\usepackage{graphicx}    % needed for including graphics e.g. EPS, PS
+\usepackage{setspace}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\topmargin -1.5cm        % read Lamport p.163
+\oddsidemargin -0.04cm   % read Lamport p.163
+\evensidemargin -0.04cm  % same as oddsidemargin but for left-hand pages
+\textwidth 16.59cm
+\textheight 21.94cm 
+%\pagestyle{empty}       % Uncomment if don't want page numbers
+\parskip 7.2pt           % sets spacing between paragraphs
+\renewcommand{\baselinestretch}{1} % Uncomment for 1.5 spacing between lines
+\newcommand{\tab}{\hspace*{5mm}}
+\parindent 0pt		 % sets leading space for paragraphs
+
+\begin{document}   
+\title{COMS 567: Bioinformatics I, Fall 2018\\
+Homework 1}
+\author{Eulenstein, Oliver}
+\date{}
+
+\maketitle
+{\bf Problem 1.} Relative asymptotic growths.\\
+\tab Indicate, for each pair of expressions (A,B) in the table below, whether A is O, o, $\Omega$, $\omega$, or $\Theta$ of B. Assume that k $\geq$ 1, $\epsilon > 0$, and $c > 1$ are constants. Your answer
+should be in the form of the table with “yes” or “no” written in each box. 
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c|c|c|c| } 
+ \hline
+ A & B & O & o & \Omega & \omega & \Theta \\
+ \hline
+ $lg^k n $ & $n^\epsilon$ & & & & & \\
+ \hline
+ $n^k$ & $c^n$ & & & & & \\
+ \hline
+ $\sqrt{n}$ & $n^\sin{n}$ & & & & & \\
+ \hline
+ $2^n$ & $2^{n/2}$ & & & & & \\
+ \hline
+ $n^\log(c)$ & $c^\log(n)$ & & & & & \\
+ \hline
+ $\log(n!)$ & $\log(n^n)$ & & & & & \\
+ 
+ \hline
+\end{tabular}
+\end{center}
+
+{\bf Problem 2.} Let f(n) and g(n) be asymptotically positive functions. Prove or disprove each of
+the following conjectures.
+
+a. $f(n) = O(g(n))$ implies $lg(f(n)) = O(lg(g(n)))$, where $lg(g(n)) \geq 1$  and  $f(n) \geq 1$ for all sufficiently large n.
+
+b. $f(n) = O(g(n))$ implies ${2^{f(n)}} = O({2^{g(n)}})$.
+
+c. $f(n) = O(g(n))$ implies $g(n) = \Omega(f(n))$.
+
+d. $f(n) + o(f(n)) = \Theta{(f(n))}$.\\
+
+{\bf Problem 3.} Asymptotic behavior of polynomials. \newline
+Let \newline
+\tab \tab $p(n) = \sum_{i=0}^{d} a_t n^t$
+
+\tab where $a_d > 0$, be a degree-d polynomial in n, and let k be a constant. Use the definitions of the asymptotic notations to prove the following properties.
+
+\newline \newline
+a. If $k \leq d$, then $p(n) = \Omega(n^k)$.
+\newline \newline
+b. If $k = d$, then $p(n) = \Theta(n^k)$.
+\newline \newline
+e. If $k < d$, then $p(n) = \omega(n^k)$.\\
+
+{\bf Problem 4.} There are $n$ black, $m$ green, and $k$ brown chameleons on a deserted island. When two chameleons of different colors meet they both change their color to the third one (e.g, black and green chameleons become brown). For each choice of n, m, and k  decide whether it is possible that after some time all the chameleons on the island are the same color(if you think that it is always possible, check the case n = 1, m = 3, and k = 5).\\
+
+{\bf Problem 5.} Show that every graph with two or more nodes contains two nodes that have equal degrees.\\
+\end{document}
